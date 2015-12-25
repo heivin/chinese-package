@@ -1,0 +1,12 @@
+{
+    "name": "heivin/chinese-package",
+    "description": "Common Chinese development resources in Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Heivin Wu",
+            "email": "77444176@qq.com"
+        }
+    ],
+    "require": {}
+}
