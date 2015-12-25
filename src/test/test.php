@@ -10,4 +10,7 @@ require_once __DIR__ . '/../../vendor/autoload.php'; // Autoload files using Com
 
 use Heivin\Chinese;
 
-echo Chinese::provinces();
+echo Chinese::province();
+echo Chinese::city();
+echo Chinese::area();
+echo Chinese::map('anhui');
