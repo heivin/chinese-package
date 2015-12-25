@@ -24,10 +24,7 @@
     "autoload" : {
         "psr-0" : {
             "Heivin" : "src/"
-        },
-        "classmap" : [
-            "src/commands"
-        ]
+        }
     },
     "minimum-stability" : "dev"
 }
