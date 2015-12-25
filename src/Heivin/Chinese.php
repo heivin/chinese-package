@@ -16,25 +16,34 @@ class Chinese
     protected static $area = '/../resources/data/area.json';
     protected static $map = '/../resources/map/';
 
-    public static function province()
-    {
-        return file_get_contents(dirname(__FILE__).self::$province);
+    public static function formatReturn($data,$format='array'){
+        if($format==='json'){
+            return $data;
+        }
+        else{
+            return json_decode($data);
+        }
     }
 
-    public static function city()
+    public static function province($format='array')
     {
-        return file_get_contents(dirname(__FILE__).self::$city);
+        return self::formatReturn(file_get_contents(dirname(__FILE__).self::$province),$format);
     }
 
-    public static function area()
+    public static function city($format='array')
     {
-        return file_get_contents(dirname(__FILE__).self::$area);
+        return self::formatReturn(file_get_contents(dirname(__FILE__).self::$city),$format);
     }
 
-    public static function map($province)
+    public static function area($format='array')
+    {
+        return self::formatReturn(file_get_contents(dirname(__FILE__).self::$area),$format);
+    }
+
+    public static function map($province,$format='array')
     {
         if(file_exists($file = dirname(__FILE__).self::$map.$province.'.json')){
-            return file_get_contents($file);
+            return self::formatReturn(file_get_contents($file),$format);
         }
         else{
             return NULL;
