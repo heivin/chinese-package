@@ -7,7 +7,8 @@ Common Chinese development resources in Laravel
 
     use Heivin\Chinese;
 
-    echo Chinese::province(); // return province json data
-    echo Chinese::city(); // return city json data
-    echo Chinese::area(); // return area json data
-    echo Chinese::map('anhui'); // return anhui's map json data
+    var_dump( Chinese::province() ); // Array
+    echo Chinese::city('json'); // Json
+    var_dump( Chinese::area() ); // Array
+    var_dump(json_encode(Chinese::map('anhui')));
+    var_dump(json_encode(Chinese::map('anhui','json'))); //Json

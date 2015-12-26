@@ -11,7 +11,8 @@ require_once __DIR__ . '/../../vendor/autoload.php'; // Autoload files using Com
 use Heivin\Chinese;
 
 
-echo Chinese::province(); // Array
+var_dump( Chinese::province() ); // Array
 echo Chinese::city('json'); // Json
-echo Chinese::area(); // Array
+var_dump( Chinese::area() ); // Array
 var_dump(json_encode(Chinese::map('anhui')));
+var_dump(json_encode(Chinese::map('anhui','json'))); //Json
