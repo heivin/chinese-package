@@ -18,6 +18,23 @@ Common Chinese development resources in Laravel
     var_dump(json_encode(Chinese::map('anhui')));
     var_dump(json_encode(Chinese::map('anhui','json'))); //Json
 
+## Laravel
+5.x
+
+use Heivin\Chinese;
+
+class IndexController extends Controller
+{
+
+    public function test(){
+
+        return response()->json(Chinese::province()); // Response with json
+
+        return response(Chinese::city('json'))->header('Content-Type', 'text/json'); // Response with json
+
+    }
+}
+
 ## TODO List
 
 1. 电话区号
